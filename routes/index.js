@@ -9,10 +9,10 @@ router.get('/',(req, res)=>{
 router.post('/login',(req, res)=>{
     const { username, password } = req.body;
     if(username==='kapil' && password==="12345"){
-
         res.send({message: 'success'})
-    }
-    res.send({message: 'failure'})
+    }else{
+        res.send({message: 'failure'})
+    }    
 })
 
 router.post('/admin/login', userController.login)
