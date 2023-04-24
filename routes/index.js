@@ -7,6 +7,7 @@ router.get('/',(req, res)=>{
 })
 
 router.post('/login',(req, res)=>{
+    res.send("login vala route")
     const { username, password } = req.body;
     if(username==='kapil' && password==="12345"){
         res.send({message: 'success'})
